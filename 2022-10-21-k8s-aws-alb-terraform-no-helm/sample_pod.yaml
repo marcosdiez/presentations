@@ -1,0 +1,15 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: mdiez-pod
+  namespace: my-first-namespace
+spec:
+  containers:
+    - name: mdiez-pod
+      image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
+      # image: nginx:latest
+      env:
+        - name: SAMPLE_ENV_NAME
+          value: SAMPLE_ENV_VALUE
+
+
