@@ -1,0 +1,18 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mdiez-deployment
+  namespace: my-first-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: mdiez-deployment
+  template:
+    metadata:
+      labels:
+        name: mdiez-deployment
+    spec:
+      containers:
+        - name: mdiez-deployment
+          image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
